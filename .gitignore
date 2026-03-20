@@ -1,0 +1,146 @@
+# ===========================
+# Python
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.manifest
+*.spec
+
+# Virtual environments
+venv/
+.venv/
+ENV/
+env/
+.env.local
+
+# Environment variables
+.env
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# ===========================
+# Node.js / Frontend
+# ===========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+
+# Build output
+frontend/dist/
+*.local
+
+# Vite
+*.local
+.vite/
+
+# ===========================
+# IDE / Editors
+# ===========================
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+.project
+.classpath
+.settings/
+*.code-workspace
+
+# ===========================
+# Operating System
+# ===========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===========================
+# Docker
+# ===========================
+*.pid
+docker-compose.override.yml
+
+# ===========================
+# Logs
+# ===========================
+*.log
+logs/
+*.log.*
+
+# ===========================
+# Project Specific
+# ===========================
+# Uploaded documents (keep directory structure)
+data/documents/*
+!data/documents/.gitkeep
+
+# Generated synthetic data
+data/synthetic/*
+!data/synthetic/.gitkeep
+
+# Uploaded files
+uploads/
+
+# Database files (local SQLite if used)
+*.db
+*.sqlite
+*.sqlite3
+
+# Vector store local files
+chroma_db/
+faiss_index/
+*.faiss
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+
+# ===========================
+# Secrets & Certificates
+# ===========================
+*.pem
+*.key
+*.crt
+*.p12
+secrets/
+.secrets/

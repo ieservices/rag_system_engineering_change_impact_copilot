@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #2563eb;
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Status badges */
+.status-badge {
+  @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium;
+}
+
+.status-active, .status-released, .status-passed {
+  @apply bg-green-100 text-green-800;
+}
+
+.status-draft, .status-open {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.status-review, .status-in_progress, .status-conditional {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.status-obsolete, .status-closed, .status-failed {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.status-approved, .status-implemented {
+  @apply bg-green-100 text-green-800;
+}
+
+/* Priority badges */
+.priority-low {
+  @apply bg-gray-100 text-gray-800;
+}
+
+.priority-medium {
+  @apply bg-blue-100 text-blue-800;
+}
+
+.priority-high {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.priority-critical {
+  @apply bg-red-100 text-red-800;
+}
+
+/* Chat styling */
+.chat-message {
+  @apply p-4 rounded-lg mb-4;
+}
+
+.chat-message.user {
+  @apply bg-blue-50 ml-8;
+}
+
+.chat-message.assistant {
+  @apply bg-gray-50 mr-8;
+}
+
+/* Card styling */
+.card {
+  @apply bg-white rounded-lg shadow-sm border border-gray-200;
+}
+
+.card-header {
+  @apply px-4 py-3 border-b border-gray-200 font-medium;
+}
+
+.card-body {
+  @apply p-4;
+}
+
+/* Source card */
+.source-card {
+  @apply p-3 border border-gray-200 rounded-lg hover:border-blue-300 cursor-pointer transition-colors;
+}
+
+.source-card:hover {
+  @apply bg-blue-50;
+}
+
+/* Confidence meter */
+.confidence-meter {
+  @apply h-2 rounded-full bg-gray-200 overflow-hidden;
+}
+
+.confidence-fill {
+  @apply h-full rounded-full transition-all duration-300;
+}
+
+.confidence-high {
+  @apply bg-green-500;
+}
+
+.confidence-medium {
+  @apply bg-yellow-500;
+}
+
+.confidence-low {
+  @apply bg-red-500;
+}
+
+/* Loading animation */
+.loading-dots::after {
+  content: '';
+  animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+  0%, 20% { content: '.'; }
+  40% { content: '..'; }
+  60%, 100% { content: '...'; }
+}
